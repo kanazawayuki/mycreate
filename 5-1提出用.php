@@ -34,7 +34,7 @@ if(isset($_POST["text"])){
                              $name=$_POST["name"];
                              $date = date("Y年m月d日 H時i分s秒");
                              $password=$_POST["password"];
-                        //テーブルのデータ？
+                        //テーブルのデータ
                         $sql = $pdo -> prepare("INSERT INTO board (name, comment,date,password) VALUES (:name, :comment, :date, :password)");
                         	$sql -> bindParam(':name', $name, PDO::PARAM_STR);
                         	$sql -> bindParam(':comment', $comment, PDO::PARAM_STR);
